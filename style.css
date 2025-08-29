@@ -1,0 +1,82 @@
+/* --- 全局與字體設定 --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #121212; /* 深灰色背景 */
+    color: #e0e0e0; /* 淺灰色文字 */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* --- 主要容器與排版 --- */
+.container {
+    width: 100%;
+    max-width: 1200px; /* 限制最大寬度，在大螢幕上更好看 */
+    padding: 30px;
+    background-color: #1e1e1e; /* 比背景稍亮的容器顏色 */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+h1 {
+    color: #ffffff; /* 純白標題 */
+    font-size: 2.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #a0a0a0; /* 說明文字顏色 */
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+/* --- 圖表容器 --- */
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 450px; /* 給圖表一個固定的高度 */
+    margin-bottom: 40px;
+}
+
+/* --- 頁腳 --- */
+.footer {
+    font-size: 0.9em;
+    color: #757575;
+}
+
+.footer a {
+    color: #4db8ff; /* 亮藍色連結 */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #81c9fa; /* 滑鼠懸停時變色 */
+    text-decoration: underline;
+}
+
+/* --- 響應式設計 (手機版) --- */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .chart-container {
+        height: 500px; /* 手機上讓圖表高一點，避免擠在一起 */
+    }
+}

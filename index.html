@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通勤時間儀表板</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入一個漂亮的圖表庫 Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- 引入 Chart.js 的熱圖外掛 -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-chart-matrix@2.0.1/dist/chartjs-chart-matrix.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>通勤時間熱圖</h1>
+        <p>顯示每週各時段的平均行車時間（分鐘）</p>
+        <div class="chart-container">
+            <canvas id="heatmap"></canvas>
+        </div>
+        <div class="footer">
+            資料來源: <a href="https://docs.google.com/spreadsheets/d/1pYhyGZgdfeOx6L0nkWPuERDqNP2sf9HDQD0Th4JXmyk/edit?usp=sharing" target="_blank">通勤數據</a> | 最後更新: <span id="last-updated">讀取中...</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
