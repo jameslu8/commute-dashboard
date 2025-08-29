@@ -14,13 +14,15 @@ async function fetchDataAndRenderChart() {
         const chartData = [];
         data.forEach(row => {
             for (let hour = 0; hour < 24; hour++) {
-                // row['DayOfWeek'] 是 0-6，對應我們的 days 陣列
-                // row[hour] 是該小時的平均時間，如果沒有數據會是 null
-                if (row[hour] !== null && row[hour] !== undefined) {
+                // 將數字 hour 轉成字串來查找屬性
+                const hourKey = String(hour);
+                const value = row[hourKey];
+
+                if (value !== null && value !== undefined) {
                     chartData.push({
-                        x: hour, // X 軸是小時
-                        y: row['DayOfWeek'], // Y 軸是星期
-                        v: row[hour] // 值是通勤時間
+                        x: hour, // X 軸仍然用數字
+                        y: row['DayOfWeek'], // Y 軸用數字
+                        v: value // 值是我們用字串鍵取出的
                     });
                 }
             }
